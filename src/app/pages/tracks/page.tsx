@@ -10,8 +10,8 @@ import {TrackList} from "./../../components/TrackList";
 export default function Page (){
     const router = useRouter();
     const tracks: ITrack[] =
-        [{_id: "3", name: "Skrip4", artist: "Skrip", text: "Skrip Skrip", listens:0, picture:"",audio:"",comments:[]},
-        {_id:"3",name:"Skrip4",artist:"Skrip",text:"Skrip Skrip",listens:0,picture:"",audio:"",comments:[]}]
+        [{_id: "3", name: "Skrip3", artist: "Skrip3", text: "Skrip Skrip", listens:0, picture:"",audio:"",comments:[]},
+        {_id:"4",name:"Skrip4",artist:"Skrip4",text:"Skrip Skrip",listens:0,picture:"",audio:"",comments:[]}]
     
     
     return (

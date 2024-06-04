@@ -18,8 +18,8 @@ export const TrackItem: React.FC<TrackItemProps> = ({track, active= true}) =>{
     const router = useRouter();
 
     return (
-        <Card className={styles.track} onClick={()=>router.push(`/pages/tracks/${track._id}`)}>
-            <IconButton>{active? <Pause/> : <PlayArrow/>}</IconButton>
+        <Card className={styles.track} onClick={()=>router.push('tracks/'+ track._id)}>
+            <IconButton onClick={e=> e.stopPropagation()}>{active? <Pause/> : <PlayArrow/>}</IconButton>
             <img src={track.picture}  alt={track.name} width={70} height={70}/>
             <Grid container direction="column" className={styles.nameContainer}>
                 <div>{track.name}</div>
@@ -27,7 +27,9 @@ export const TrackItem: React.FC<TrackItemProps> = ({track, active= true}) =>{
             </Grid>
 
             {active && <div>2:42 / 03:22</div>}
-            <IconButton className={styles.deleteButton}>
+            <IconButton
+                onClick={e=> e.stopPropagation()}
+                className={styles.deleteButton}>
                 <Delete/>
             </IconButton>
         </Card>
